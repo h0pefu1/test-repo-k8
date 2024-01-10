@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hpefutestrepokclusterapi1 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hpefutestrepokclusterapi1
+  template:
+    metadata:
+      labels:
+        app: hpefutestrepokclusterapi1 
+    spec:
+      containers:
+        - name: hpefutestrepokclusterapi1 
+          image: testregistryforquanex.azurecr.io/hpefutestrepokclusterapi1
+          ports:
+          - containerPort: 80
